@@ -2,6 +2,7 @@
 var today = moment()
 console.log(today.format("MMMM Do YYYY"))
 $("#currentDay").text(today.format("MMM Do, YYYY"));
+var saveButtons = document.querySelectorAll("#saveButton");
 
 
 //Variables
@@ -48,13 +49,36 @@ console.log(arrayMadeWithMap);
 console.log(arrayMadeWithForEach);
 console.log(arrayMadeWithForLoop);
 
-
 //Functions
-
 //save function to local storage
-//text areas for Event
+// function saveEvent() {
+//     var events = document.querySelector("event").value;
+//     var scores = JSON.parse(localStorage.getItem(events));
+//     console.log(scores);
+//     if (events) {
+//       events.push(currentEvents);
+//       localStorage.setItem(event, JSON.stringify(events));
+//     } else {
+//       localStorage.setItem(events, JSON.stringify([currentEvents]));
+//     }
+    //     events = JSON.parse(localStorage.getItem(events));
+    //     var h2 = document.querySelector(".events");
+    //     var eventsEl = document.querySelector(".events");
+    //     for (var i = 0; i < events.length; i++) {
+    //     var li = document.createElement("li")
+    //     li.textContent = events[i];
+    //     eventsEl.appendChild(li);
+    //     }
+    // }
+
+    //This function gets the current events
+// function events() {
+//     var eventText = document.querySelector("#event");
+//     eventText.textContent = currentEvents;
+//   }
+
+
 //functionality for testing whether time has passed
-//add unique ids for time id = "hour-9", "hour-10"
 //for loop to check time and compare to values in hours and color coding them
 //function on page load all saved events are still displayed
 
