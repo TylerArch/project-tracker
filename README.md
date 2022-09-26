@@ -14,11 +14,10 @@ Clicking on an event field allows you to enter the details for an upcoming event
 
 Here is a screenshot of the landing page:
 
-![Application Preview](https://github.com/TylerArch/project-tracker/blob/main/develp/assets/images/landing-page-screenshot.png?raw=true)
+![Application Preview](https://github.com/TylerArch/project-tracker/blob/main/develop/assets/images/landing-page-screenshot.png?raw=true)
 
 Here is the link to the live webpage:
 
-https://tylerarch.github.io/code-quiz/
 
 ## Credits
 
