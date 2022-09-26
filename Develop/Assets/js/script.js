@@ -1,22 +1,22 @@
 ///DOM elements
 var today = moment()
-console.log(today.format("MMMM Do YYYY"))
-$("#currentDay").text(today.format("MMM Do, YYYY"));
+$("#currentDay").text(today.format("dddd MMM Do, YYYY"));
 var saveButtons = document.querySelectorAll("#saveButton");
 
 
 //Variables
 var hours = [
-    "9am",
-    "10am",
-    "11am",
-    "12pm",
-    "1pm",
-    "2pm",
-    "3pm",
-    "4pm",
-    "5pm",   
+    "9am", moment().startOf('hour').fromNow(),
+    "10am", moment().startOf('hour').fromNow(),
+    "11am", moment().startOf('hour').fromNow(),
+    "12pm", moment().startOf('hour').fromNow(),
+    "1pm", moment().startOf('hour').fromNow(),
+    "2pm", moment().startOf('hour').fromNow(),
+    "3pm", moment().startOf('hour').fromNow(),
+    "4pm", moment().startOf('hour').fromNow(),
+    "5pm", moment().startOf('hour').fromNow(),
 ]
+console.log(hours);
 // Manipulate items in an array
 // Map vs For Each vs For Loop
 const hourArray = [
