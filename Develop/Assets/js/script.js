@@ -5,6 +5,7 @@ var saveButtons = document.querySelectorAll("#saveButton");
 
 
 //Variables
+const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 var hours = [
     "9am", moment().startOf('hour').fromNow(),
     "10am", moment().startOf('hour').fromNow(),
@@ -17,8 +18,7 @@ var hours = [
     "5pm", moment().startOf('hour').fromNow(),
 ]
 console.log(hours);
-// Manipulate items in an array
-// Map vs For Each vs For Loop
+
 const hourArray = [
     '9am',
     '10am',
@@ -31,56 +31,43 @@ const hourArray = [
     '5pm'
 ];
 
-// Map
-const arrayMadeWithMap = hourArray.map(item => ` ${item}`);
-
-// For Each
-const arrayMadeWithForEach = [];
-hourArray.forEach(item => arrayMadeWithForEach.push(` ${item}`));
-
-// For Loop
-const arrayMadeWithForLoop = [];
-for (i=0; i < hourArray.length; i++) {
-    arrayMadeWithForLoop.push(` ${hourArray[i]}`);
-}
-
-// The results for each are the same!
-console.log(arrayMadeWithMap);
-console.log(arrayMadeWithForEach);
-console.log(arrayMadeWithForLoop);
-
 //Functions
-//save function to local storage
-// function saveEvent() {
-//     var events = document.querySelector("event").value;
-//     var scores = JSON.parse(localStorage.getItem(events));
-//     console.log(scores);
-//     if (events) {
-//       events.push(currentEvents);
-//       localStorage.setItem(event, JSON.stringify(events));
-//     } else {
-//       localStorage.setItem(events, JSON.stringify([currentEvents]));
-//     }
-    //     events = JSON.parse(localStorage.getItem(events));
-    //     var h2 = document.querySelector(".events");
-    //     var eventsEl = document.querySelector(".events");
-    //     for (var i = 0; i < events.length; i++) {
-    //     var li = document.createElement("li")
-    //     li.textContent = events[i];
-    //     eventsEl.appendChild(li);
-    //     }
-    // }
+localStorageFunctions();
+//save function to local storage and retrieve to stay on page after refresh
 
-    //This function gets the current events
-// function events() {
-//     var eventText = document.querySelector("#event");
-//     eventText.textContent = currentEvents;
-//   }
+function localStorageFunctions() {
+   
+        for (let i = 0; i < numbers.length;i++) {
+            $("input")[i].value = localStorage.getItem("input" + String(i + 1)); 
+        }
+    }
+    $("button").on("click", function (event) {
+        event.preventDefault();
+
+        for (let i = 0; i < numbers.length;i++) {
+            localStorage.setItem("input" + String(i+1),$("input")[i].value)
+        }});
+    
+
+
 
 
 //functionality for testing whether time has passed
 //for loop to check time and compare to values in hours and color coding them
-//function on page load all saved events are still displayed
+// function timeValid() {
+//     var currentHour = moment().hours(); //Check current timeblock user is in and determines whether it's PAST PRESENT OR FUTURE
+//     $(".time-block").each(function () {
+//         var currentBlock = parseInt($(this).attr("id").split(" ")[0]);
+//         if (currentBlock < currentHour) {
+//             $(this).addClass("past");
+//         } else if (currentBlock === currentHour) {
+//             $(this).removeClass("past");
+//             $(this).addClass("present");
+//         } else {
+//             $(this).removeClass("past");
+//             $(this).removeClass("present");
+//             $(this).addClass("future");
+//         }
+//     });
+// }
 
-//Event listeners
-//save button on click get text from text area and push to local storage and put that in text box for that row and hour
