@@ -14,7 +14,7 @@ Clicking on an event field allows you to enter the details for an upcoming event
 
 Here is a screenshot of the landing page:
 
-![Application Preview](https://github.com/TylerArch/project-tracker/blob/main/Develop/assets/images/landing-page-screenshot.png?raw=true)
+![Application Preview](https://github.com/TylerArch/project-tracker/blob/main/develop/assets/images/landing-page-screenshot.png?raw=true)
 
 Here is the link to the live webpage:
 
@@ -23,10 +23,10 @@ https://tylerarch.github.io/project-tracker/
 
 ## Credits
 
-There were no collaborators on this Password Generator.
+There were no collaborators on this Project Tracker.
 
 ## License
 
-No licensing was used in the creation of this Password Generator.
+No licensing was used in the creation of this Project tracker.
 
 ---
